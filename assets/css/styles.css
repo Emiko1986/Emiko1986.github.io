@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Signika+Negative:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+    padding: 1.5%;
+    
+}
+
+.nav{
+    text-align: center;
+    /* border: 2px solid goldenrod; */
+}
+.nav ul{
+    display: flex;
+    line-height: 2;
+}
+.nav ul li{
+    padding-left: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    position: relative; /* ::afterの位置調整のために追加 */
+}
+.nav li:hover{
+    color: pink;
+}
+.nav li:hover::after{
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    transition-delay: 0s;
+    transition: opacity .8s, transform .6s ease-in-out;
+}
+.nav a{
+    text-shadow: 5px 5px 5px #d5b076;
+    color: #d47a0d;
+    font-size: 22px;
+    font-family: "Signika Negative", sans-serif;
+}
+.nav li:hover a {
+    border-radius: 10px; 
+    background-color: rgba(255, 192, 203, 0.5); /* 半透明のピンク色 */
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.5); /* ぼかし効果 */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.appointment{
+    /* border: 2px solid green; */
+    line-height: 50px;
+}
+.btn{
+    background-color: #d5b076;
+    color: #fff;
+    padding: 3px 15px;
+    display: inline-block;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    font-weight: bold;
+}
+.btn:hover{
+    transform: translateY(-5px);
+}
+/* banner */
+.banner{
+    background-image: url(../images/pregnant.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 55vh;
+}
+/* content */
+.content{
+    display: flex;
+    margin: 0; 
+    padding: 0;
+    height: 900px;
+}
+.title{
+    margin-left: 100px;
+    font-family: "Signika Negative", sans-serif;
+    color: #d47a0d;
+}
+
+.content-left{
+    width: 50%;
+    height: 700px;
+    padding: 50px;
+    background-color: #e3dbcc;
+    /* float: left; */
+}
+.left1 img{
+    width: 400px;
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 100px;
+}
+.left2 p {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 80%;
+    color: #8B4513;
+}
+.content-right{
+    width: 50%;
+    height: 700px;
+    padding: 50px;
+    background-color: whitesmoke;
+}  
+.right1{
+    margin-top: 160px;
+    width: 80%;
+}
+.right1 p{
+    color: #8B4513;
+}
+
+.right2 img{
+    width: 400px;
+    height: 300px;
+    margin-top: 180px;
+}
+.ornate{
+    text-align: center;
+    font-size: 30px;
+    color:#d47a0d;
+    line-height: 2;
+}
+
+.banner2{
+    background-image: url(../images/heart.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 55vh;
+    position: relative;
+}
+.banner-text{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 15%;
+    background-color: #c7a17a;
+    box-sizing: border-box;
+    padding: 3px 5px;
+}
+.banner-text h2{
+    color: #fff;
+    font-size: 16px;
+}
+/* condition */
+.condition{
+    margin-top: 50px;
+    background: white;
+    padding: 20px 0;
+}
+.condition ol {
+    list-style-position: inside;
+}
+.title-condition{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+.wrapper li{
+    margin-bottom: 20px;
+}
+/* step */
+.step{
+    width: 100%;
+}
+.inner {
+    width: 80%; /* 必要に応じて調整可能 */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* floatのクリア */
+}
+.inner h2{
+    text-align: center;
+    margin: 30px 0;
+}
+.steps{
+    display: flex;
+}
+.steps h3{
+    margin-bottom: 30px;
+}
+/* .steps p{
+    width: 80%;
+} */
+.steps2{
+    display: flex;
+}
+.steps2 h3{
+    margin-bottom: 30px;
+}
+    
+.step1, .step2, .step3, .step4{
+    width: 48%;
+    height: 300px;
+    padding: 30px 15px;
+    text-align: center;
+    margin: 1%;
+    box-sizing: border-box;
+}
+.step1, .step4{
+    background-color: #d5b076;
+}
+.step2, .step3{
+    background-color: #ead1c0;
+}
+.steps, .steps2 {
+    width: 100%; /* 全体幅を設定 */
+    margin: 0 auto; /* 中央配置 */
+    overflow: hidden; /* floatのクリア */
+}
+/* contact */
+.section-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.container{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+#contact {
+    margin-bottom: 50px;
+}
+
+#contact dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#contact dt {
+    width: 15%;
+}
+
+#contact dd {
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea {
+    width: 100%;
+    border: solid 1px #c8c8c8;
+    padding: 10px;
+}
+
+#contact dd textarea {
+    height: 10rem;
+}
+
+#contact .submit-btn {
+    text-align: center;
+}
+
+#contact .submit-btn input {
+    width: 200px;
+    background-color:  #d5b076;
+    color: #fff;
+    padding: 15px 0;
+    border: none; /* ボーダーを削除 */
+    outline: none; /* アウトラインを削除 */
+    transition: transform 0.3s ease; /* アニメーションの追加 */
+}
+#contact .submit-btn input:hover {
+    transform: translateY(5px); /* 少し下に移動 */
+}
+/* #contact .submit-btn input:hover {
+    background-color: #d5b076;
+    color: #fff;
+    padding: 3px 15px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    font-weight: bold;
+    transform: translateY(-5px);
+} */
+
+/* footer */
+footer{
+    background-color: #d5b076;
+    padding: 10px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+}
+.social img{
+    width: 20px;
+    height: 20px;
+}
+footer a{
+    padding-right: 5px;
+}
+.copy{
+    text-align: center;
+}
+p{
+    color: #fff; 
+}
